@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 export default function RootLayout({children}:Readonly<{children: React.ReactNode}>) {
     return (
         <html lang="en">
-            <body className={`${josefin.className} antialiased min-h-screen bg-primary-950 flex flex-col`}>
+            <body className={`${josefin.className} antialiased min-h-screen bg-primary-950 flex flex-col relative`}>
                 <Header/>
-                <div className="flex-1 px-8 py-12">
+                <div className="flex-1 px-8 py-12 grid">
 
-                <main className="max-w-7xl mx-auto">{children}</main>
+                <main className="max-w-7xl mx-auto w-full">{children}</main>
                 </div>
             </body>
         </html>
