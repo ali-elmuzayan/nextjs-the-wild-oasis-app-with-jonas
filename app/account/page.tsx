@@ -2,9 +2,9 @@ import React from 'react';
 
 const Account = () => {
     return (
-        <div>
-            Account page
-        </div>
+        <h2 className="font-semibold text-2xl text-accent-400 mb-7">
+            Welcome, user
+        </h2>
     );
 };
 
