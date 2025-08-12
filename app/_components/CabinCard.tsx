@@ -1,11 +1,11 @@
 import {UsersIcon} from "@heroicons/react/24/solid";
-//import Image from "next/image";
 import Link from "next/link";
 import Image from "next/image";
+import {CabinType} from "@/app/_lib/data-service";
 
-export default function CabinCard({cabin}: {cabin: any}) {
-    const {id, name, maxCapacity, regularPirce,discount, image} = cabin;
-console
+export default function CabinCard({cabin}: {cabin: CabinType}) {
+    const {id, name, maxCapacity, regularPrice,discount, image} = cabin;
+
     return (
         <div className="flex border-primary-800 border">
             <Image src={image} alt={`Cabin ${name}`} width={200} height={200}
@@ -28,14 +28,14 @@ console
                         {discount > 0 ? (
                             <>
                 <span className="text-3xl font-[350]">
-                  ${regularPirce - discount}
+                  ${regularPrice - discount}
                 </span>
                                 <span className="line-through font-semibold text-primary-600">
-                  ${regularPirce}
+                  ${regularPrice}
                 </span>
                             </>
                         ) : (
-                            <span className="text-3xl font-[350]">${regularPirce}</span>
+                            <span className="text-3xl font-[350]">${regularPrice}</span>
                         )}
                         <span className="text-primary-200">/ night</span>
                     </p>

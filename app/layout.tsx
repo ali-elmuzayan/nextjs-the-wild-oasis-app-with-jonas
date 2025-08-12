@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./_styles/globals.css";
 import Header from "@/app/_components/Header";
-import {Josefin_Sans} from "next/font/google";
+// import {Josefin_Sans} from "next/font/google";
 
-
-const josefin = Josefin_Sans({
-    subsets: ["latin"], display:"swap"
-})
+//
+// const josefin = Josefin_Sans({
+//     subsets: ["latin"], display:"swap"
+// })
 
 
 
@@ -21,7 +21,13 @@ export const metadata: Metadata = {
 export default function RootLayout({children}:Readonly<{children: React.ReactNode}>) {
     return (
         <html lang="en">
-            <body className={`${josefin.className} antialiased min-h-screen bg-primary-950 flex flex-col relative`}>
+        <head>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap"
+                rel="stylesheet"
+            />
+        </head>
+            <body className={` antialiased min-h-screen bg-primary-950 flex flex-col relative`}>
                 <Header/>
                 <div className="flex-1 px-8 py-12 grid">
 
