@@ -4,7 +4,7 @@ import Image from "next/image";
 import {CabinType} from "@/app/_lib/data-service";
 
 export default function CabinCard({cabin}: {cabin: CabinType}) {
-    const {id, name, maxCapacity, regularPrice,discount, image} = cabin;
+    const {id, name, maxCapacity, regularPrice ,discount, image} = cabin;
 
     return (
         <div className="flex border-primary-800 border">

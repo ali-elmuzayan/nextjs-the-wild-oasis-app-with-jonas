@@ -17,7 +17,6 @@ export async function getCabins() :Promise<CabinType[]> {
 
 
     // for testing
-    await new Promise((res) => setTimeout(res, 3000));
     if (error) {
         console.log(error)
         throw new Error(error.message);

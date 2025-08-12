@@ -2,6 +2,7 @@ import Image from "next/image";
 import {EyeSlashIcon, PhotoIcon, UsersIcon} from "@heroicons/react/24/solid";
 import {CabinType, getCabinById, getCabins} from "@/app/_lib/data-service";
 import {notFound} from "next/navigation";
+import TextExpander from "@/app/_components/TextExpander";
 
 interface CabinPageProps {
     params: {cabinId: string}
@@ -75,7 +76,7 @@ export default async function Page({params}: CabinPageProps) {
 
                         {description && (
                             <p className="text-primary-300 text-base lg:text-lg leading-relaxed">
-                                {description}
+                                <TextExpander>{description}</TextExpander>
                             </p>
                         )}
                     </div>
